@@ -8,6 +8,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   pname = "rust-package";
   version = "0";
   src = ../.;
+  cargoHash = lib.fakeHash;
 
   nativeBuildInputs = [ pkg-config ];
   buildInputs = [ ];
