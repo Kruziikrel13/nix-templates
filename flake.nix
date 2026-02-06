@@ -5,6 +5,10 @@
     { self, nixpkgs }:
     {
       templates = {
+        rust = {
+          path = ./rust;
+          description = "Rust Developer Shell";
+        };
         nix = {
           path = ./nix;
           description = "Nix Developer Shell";
