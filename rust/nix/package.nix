@@ -1,23 +1,23 @@
 {
   lib,
   rustPlatform,
-
   pkg-config,
 }:
-rustPlatform.buildRustPackage (finalAttrs: {
-  pname = "rust-package";
+rustPlatform.buildRustPackage {
+  pname = "package";
   version = "0";
+
   src = ../.;
-  cargoHash = lib.fakeHash;
 
   nativeBuildInputs = [ pkg-config ];
-  buildInputs = [ ];
+  cargoHash = lib.fakeHash;
 
   meta = with lib; {
     homepage = "";
     description = "";
     mainProgram = "";
     license = licenses.mit;
+    platforms = platforms.linux;
     maintainers = [ maintainers.kruziikrel13 ];
   };
-})
+}

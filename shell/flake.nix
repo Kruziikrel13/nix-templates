@@ -11,12 +11,7 @@
     {
       devShells = forEachSystem (
         system: pkgs: rec {
-          default = pkgs.mkShellNoCC {
-            shellHook = ''
-              export SHELL=${lib.getExe pkgs.bash}
-            '';
-            packages = with pkgs; [ ];
-          };
+          default = import ./nix/shell.nix { inherit pkgs; };
         }
       );
     };

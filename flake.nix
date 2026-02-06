@@ -1,21 +1,20 @@
 {
   description = "A collection of nix flake templates for various languages";
-  inputs.nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
   outputs =
-    { self, nixpkgs }:
+    { self }:
     {
       templates = {
-        rust = {
-          path = ./rust;
-          description = "Rust Developer Shell";
+        shell = {
+          path = ./shell;
+          description = "Shell Shell Shell";
         };
         nix = {
           path = ./nix;
           description = "Nix Developer Shell";
         };
-        shell = {
-          path = ./shell;
-          description = "Shell Shell Shell";
+        rust = {
+          path = ./rust;
+          description = "Rust Developer Shell";
         };
       };
     };
